@@ -1,0 +1,13 @@
+<root BTCPP_format="4" >
+
+  <BehaviorTree ID="MainTree">
+    <Sequence name="root_sequence">
+      <TestNode name="node_1"/>
+      <TestNode name="node_2"/>
+      <TestNode name="node_3"/>
+      <TestNode name="node_4"/>
+      <TestNode name="node_5"/>
+    </Sequence>
+  </BehaviorTree>
+
+</root>
