@@ -3,9 +3,15 @@
 namespace TestNodes
 {
 
-BT::NodeStatus TestNode::tick()
+BT::NodeStatus CalcNode::tick()
 {
-    std::cout << "TestNode: " << this->name() << std::endl;
+    auto msg = getInput<std::string>("input_number");
+    if (!msg)
+    {
+        throw BT::RuntimeError( "missing required input [input_number]: ", msg.error() );
+    }
+    std::cout << "CalcNode: " << msg.value() << std::endl;
+    setOutput("output_number", "ff");
     return BT::NodeStatus::SUCCESS;
 }
 

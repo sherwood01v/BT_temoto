@@ -1,0 +1,11 @@
+<root BTCPP_format="4" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+           <CalcNode     message="hello" />
+           <CalcNode   text="{number}"/>
+           <CalcNode     message="{number}" />
+           <CalcNode     message="{number}" />
+           <CalcNode     message="{number}" />
+       </Sequence>
+    </BehaviorTree>
+</root>

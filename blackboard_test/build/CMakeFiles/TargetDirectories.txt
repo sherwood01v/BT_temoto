@@ -1,3 +1,4 @@
 /home/veronika/BT_temoto/blackboard_test/build/CMakeFiles/rebuild_cache.dir
 /home/veronika/BT_temoto/blackboard_test/build/CMakeFiles/edit_cache.dir
+/home/veronika/BT_temoto/blackboard_test/build/CMakeFiles/calculator.dir
 /home/veronika/BT_temoto/blackboard_test/build/CMakeFiles/blackboard.dir

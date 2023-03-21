@@ -19,3 +19,13 @@ target_link_libraries(blackboard
   BT::behaviortree_cpp
   Threads::Threads
 )
+
+# Build calculator
+add_executable(calculator 
+  src/counter.cpp
+  sample_nodes/test_nodes.cpp
+)
+target_link_libraries(calculator 
+  BT::behaviortree_cpp
+  Threads::Threads
+)

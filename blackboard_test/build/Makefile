@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named calculator
+
+# Build rule for target.
+calculator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calculator
+.PHONY : calculator
+
+# fast build rule for target.
+calculator/fast:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
+.PHONY : calculator/fast
+
+#=============================================================================
 # Target rules for targets named blackboard
 
 # Build rule for target.
@@ -150,6 +163,33 @@ sample_nodes/dummy_nodes.cpp.s:
 	$(MAKE) -f CMakeFiles/blackboard.dir/build.make CMakeFiles/blackboard.dir/sample_nodes/dummy_nodes.cpp.s
 .PHONY : sample_nodes/dummy_nodes.cpp.s
 
+sample_nodes/test_nodes.o: sample_nodes/test_nodes.cpp.o
+
+.PHONY : sample_nodes/test_nodes.o
+
+# target to build an object file
+sample_nodes/test_nodes.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/sample_nodes/test_nodes.cpp.o
+.PHONY : sample_nodes/test_nodes.cpp.o
+
+sample_nodes/test_nodes.i: sample_nodes/test_nodes.cpp.i
+
+.PHONY : sample_nodes/test_nodes.i
+
+# target to preprocess a source file
+sample_nodes/test_nodes.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/sample_nodes/test_nodes.cpp.i
+.PHONY : sample_nodes/test_nodes.cpp.i
+
+sample_nodes/test_nodes.s: sample_nodes/test_nodes.cpp.s
+
+.PHONY : sample_nodes/test_nodes.s
+
+# target to generate assembly for a file
+sample_nodes/test_nodes.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/sample_nodes/test_nodes.cpp.s
+.PHONY : sample_nodes/test_nodes.cpp.s
+
 src/blackboard.o: src/blackboard.cpp.o
 
 .PHONY : src/blackboard.o
@@ -177,6 +217,33 @@ src/blackboard.cpp.s:
 	$(MAKE) -f CMakeFiles/blackboard.dir/build.make CMakeFiles/blackboard.dir/src/blackboard.cpp.s
 .PHONY : src/blackboard.cpp.s
 
+src/counter.o: src/counter.cpp.o
+
+.PHONY : src/counter.o
+
+# target to build an object file
+src/counter.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/counter.cpp.o
+.PHONY : src/counter.cpp.o
+
+src/counter.i: src/counter.cpp.i
+
+.PHONY : src/counter.i
+
+# target to preprocess a source file
+src/counter.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/counter.cpp.i
+.PHONY : src/counter.cpp.i
+
+src/counter.s: src/counter.cpp.s
+
+.PHONY : src/counter.s
+
+# target to generate assembly for a file
+src/counter.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/counter.cpp.s
+.PHONY : src/counter.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -185,13 +252,20 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... calculator"
 	@echo "... blackboard"
 	@echo "... sample_nodes/dummy_nodes.o"
 	@echo "... sample_nodes/dummy_nodes.i"
 	@echo "... sample_nodes/dummy_nodes.s"
+	@echo "... sample_nodes/test_nodes.o"
+	@echo "... sample_nodes/test_nodes.i"
+	@echo "... sample_nodes/test_nodes.s"
 	@echo "... src/blackboard.o"
 	@echo "... src/blackboard.i"
 	@echo "... src/blackboard.s"
+	@echo "... src/counter.o"
+	@echo "... src/counter.i"
+	@echo "... src/counter.s"
 .PHONY : help
 
 

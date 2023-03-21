@@ -75,11 +75,32 @@ class ThinkWhatToSay : public BT::SyncActionNode
 
     NodeStatus tick() override;
 
-    static BT::PortsList providedPorts();
+    static BT::PortsList providedPorts()
+    {
+      return { BT::OutputPort<std::string>("text") };
+    }
 };
 
 //Same as class SaySomething, but to be registered with SimpleActionNode
 NodeStatus SaySomethingSimple(BT::TreeNode& self);
+
+// class Something : public BT::SyncActionNode
+// {
+//   public:
+//     Something(const std::string& name, const BT::NodeConfig& config)
+//       : BT::SyncActionNode(name, config)
+//     {
+//     }
+
+//     // You must override the virtual function tick()
+//     NodeStatus tick() override;
+
+//     // It is mandatory to define this static method.
+//     static BT::PortsList providedPorts()
+//     {
+//         return{ BT::InputPort<std::string>("message") };
+//     }
+// };
 
 // Example os Asynchronous node that use StatefulActionNode as base class
 class SleepNode : public BT::StatefulActionNode

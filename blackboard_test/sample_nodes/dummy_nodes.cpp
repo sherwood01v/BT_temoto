@@ -78,9 +78,4 @@ BT::NodeStatus ThinkWhatToSay::tick()
     return BT::NodeStatus::SUCCESS;
 }
 
-static BT::PortsList ThinkWhatToSay::providedPorts()
-{
-    return { BT::OutputPort<std::string>("text") };
-}
-
 }

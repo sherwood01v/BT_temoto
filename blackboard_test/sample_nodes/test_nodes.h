@@ -7,16 +7,22 @@
 namespace TestNodes
 {
 
-class TestNode : public BT::SyncActionNode
+class CalcNode : public BT::SyncActionNode
 {
   public:
-    TestNode(const std::string& name) :
-        BT::SyncActionNode(name, {})
+    CalcNode(const std::string& name, const BT::NodeConfig& config) :
+        BT::SyncActionNode(name, config)
     {
     }
 
     // You must override the virtual function tick()
     BT::NodeStatus tick() override;
+
+    static BT::PortsList providedPorts()
+    {
+      return{ BT::InputPort<std::string>("input_number")};
+      return { BT::OutputPort<std::string>("output_number") };
+    }
 };
 
 } // end namespace
