@@ -2,9 +2,9 @@
     <BehaviorTree ID="MainTree">
        <Sequence name="root_sequence">
            <CalcNode     input_number="hello" output_number="{number}"/>
-           <CalcNode     input_number="{number}"/>
+           <CalcNode     input_number="{number}" output_number="{number}" />
+           <!-- <CalcNode     input_number="{number}" /> -->
            <!-- <CalcNode     input_number="{number}" />
-           <CalcNode     input_number="{number}" />
            <CalcNode     input_number="{number}" /> -->
        </Sequence>
     </BehaviorTree>

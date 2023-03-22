@@ -20,8 +20,9 @@ class CalcNode : public BT::SyncActionNode
 
     static BT::PortsList providedPorts()
     {
-      return{ BT::InputPort<std::string>("input_number")};
-      return { BT::OutputPort<std::string>("output_number") };
+      return{ BT::InputPort<std::string>("input_number"),
+      BT::OutputPort<std::string>("output_number")};
+      // return{ BT::OutputPort<std::string>("output_number")};
     }
 };
 
