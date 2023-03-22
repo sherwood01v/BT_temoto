@@ -8,6 +8,7 @@ int main()
 {  
   BT::BehaviorTreeFactory factory;
 
+  factory.registerNodeType<TestNodes::InitialCalcNode>("InitialCalcNode");
   factory.registerNodeType<TestNodes::CalcNode>("CalcNode");
 
   auto tree = factory.createTreeFromFile("./calculator.xml");

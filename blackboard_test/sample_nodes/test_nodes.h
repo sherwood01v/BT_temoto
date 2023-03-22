@@ -7,6 +7,23 @@
 namespace TestNodes
 {
 
+class InitialCalcNode : public BT::SyncActionNode
+{
+  public:
+    InitialCalcNode(const std::string& name, const BT::NodeConfig& config) :
+        BT::SyncActionNode(name, config)
+    {
+    }
+
+    // You must override the virtual function tick()
+    BT::NodeStatus tick() override;
+
+    static BT::PortsList providedPorts()
+    {
+      return{BT::OutputPort<int8_t>("output_number")};
+    }
+};
+
 class CalcNode : public BT::SyncActionNode
 {
   public:
@@ -20,9 +37,8 @@ class CalcNode : public BT::SyncActionNode
 
     static BT::PortsList providedPorts()
     {
-      return{ BT::InputPort<std::string>("input_number"),
-      BT::OutputPort<std::string>("output_number")};
-      // return{ BT::OutputPort<std::string>("output_number")};
+      return{ BT::InputPort<int8_t>("input_number"),
+      BT::OutputPort<int8_t>("output_number")};
     }
 };
 
