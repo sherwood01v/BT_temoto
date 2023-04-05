@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/crossdoor.dir/src/crossdoor.cpp.o CMakeFiles/crossdoor.dir/sample_nodes/crossdoor_nodes.cpp.o  -o crossdoor  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so -lpthread 
