@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2)
-project(blackboard_test)
+project(reactive_seq_test)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,12 +10,12 @@ include_directories(
   sample_nodes
 )
 
-# Build calculator
-add_executable(crossdoor 
-  src/crossdoor.cpp
-  sample_nodes/crossdoor_nodes.cpp
+# Build react
+add_executable(react
+  src/react.cpp
+  sample_nodes/react_nodes.cpp
 )
-target_link_libraries(crossdoor 
+target_link_libraries(react 
   BT::behaviortree_cpp
   Threads::Threads
 )

@@ -1,0 +1,22 @@
+<root BTCPP_format="4" >
+    <BehaviorTree>
+       <ReactiveSequence>
+            <Fallback>
+                <isObjectFound/>
+                <FindObject/>
+            </Fallback>
+            <Fallback>
+                <isObjectPicked/>
+                <PickObject/>
+            </Fallback>
+            <Fallback>
+                <isSeqInterrupted/>
+                <InterruptSeq/>
+            </Fallback>
+            <Fallback>
+                <isObjectPlaced/>
+                <PlaceObject/>
+            </Fallback>
+       </ReactiveSequence>
+    </BehaviorTree>
+</root>

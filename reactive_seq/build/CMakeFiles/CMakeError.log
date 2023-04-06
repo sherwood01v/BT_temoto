@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bba3d/fast && /usr/bin/make -f CMakeFiles/cmTC_bba3d.dir/build.make CMakeFiles/cmTC_bba3d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f06c5/fast && /usr/bin/make -f CMakeFiles/cmTC_f06c5.dir/build.make CMakeFiles/cmTC_f06c5.dir/build
 make[1]: Entering directory '/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bba3d.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_bba3d.dir/src.c.o   -c /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_bba3d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bba3d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_bba3d.dir/src.c.o  -o cmTC_bba3d 
-/usr/bin/ld: CMakeFiles/cmTC_bba3d.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_f06c5.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f06c5.dir/src.c.o   -c /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f06c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f06c5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_f06c5.dir/src.c.o  -o cmTC_f06c5 
+/usr/bin/ld: CMakeFiles/cmTC_f06c5.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_bba3d.dir/build.make:87: cmTC_bba3d] Error 1
+make[1]: *** [CMakeFiles/cmTC_f06c5.dir/build.make:87: cmTC_f06c5] Error 1
 make[1]: Leaving directory '/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_bba3d/fast] Error 2
+make: *** [Makefile:121: cmTC_f06c5/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_5997f/fast && /usr/bin/make -f CMakeFiles/cmTC_5997f.dir/build.make CMakeFiles/cmTC_5997f.dir/build
+Run Build Command(s):/usr/bin/make cmTC_9b4e4/fast && /usr/bin/make -f CMakeFiles/cmTC_9b4e4.dir/build.make CMakeFiles/cmTC_9b4e4.dir/build
 make[1]: Entering directory '/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5997f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5997f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_5997f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5997f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5997f.dir/CheckFunctionExists.c.o  -o cmTC_5997f  -lpthreads 
+Building C object CMakeFiles/cmTC_9b4e4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9b4e4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9b4e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b4e4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9b4e4.dir/CheckFunctionExists.c.o  -o cmTC_9b4e4  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_5997f.dir/build.make:87: cmTC_5997f] Error 1
+make[1]: *** [CMakeFiles/cmTC_9b4e4.dir/build.make:87: cmTC_9b4e4] Error 1
 make[1]: Leaving directory '/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_5997f/fast] Error 2
+make: *** [Makefile:121: cmTC_9b4e4/fast] Error 2
 
 
 

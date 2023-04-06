@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../sample_nodes/react_nodes.h
+behaviortree_cpp/behavior_tree.h
+../sample_nodes/behaviortree_cpp/behavior_tree.h
+behaviortree_cpp/bt_factory.h
+../sample_nodes/behaviortree_cpp/bt_factory.h
+
+/home/veronika/BT_temoto/reactive_seq/sample_nodes/react_nodes.cpp
+react_nodes.h
+/home/veronika/BT_temoto/reactive_seq/sample_nodes/react_nodes.h
+
+/home/veronika/BT_temoto/reactive_seq/sample_nodes/react_nodes.h
+behaviortree_cpp/behavior_tree.h
+/home/veronika/BT_temoto/reactive_seq/sample_nodes/behaviortree_cpp/behavior_tree.h
+behaviortree_cpp/bt_factory.h
+/home/veronika/BT_temoto/reactive_seq/sample_nodes/behaviortree_cpp/bt_factory.h
+
+/home/veronika/BT_temoto/reactive_seq/src/react.cpp
+behaviortree_cpp/bt_factory.h
+/home/veronika/BT_temoto/reactive_seq/src/behaviortree_cpp/bt_factory.h
+react_nodes.h
+/home/veronika/BT_temoto/reactive_seq/src/react_nodes.h
+

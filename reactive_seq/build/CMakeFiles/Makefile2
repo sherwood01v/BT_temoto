@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/veronika/BT_temoto/reactive_seq/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/crossdoor.dir/all
+all: CMakeFiles/react.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/crossdoor.dir/clean
+clean: CMakeFiles/react.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/crossdoor.dir
+# Target rules for target CMakeFiles/react.dir
 
 # All Build rule for target.
-CMakeFiles/crossdoor.dir/all:
-	$(MAKE) -f CMakeFiles/crossdoor.dir/build.make CMakeFiles/crossdoor.dir/depend
-	$(MAKE) -f CMakeFiles/crossdoor.dir/build.make CMakeFiles/crossdoor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles --progress-num=1,2,3 "Built target crossdoor"
-.PHONY : CMakeFiles/crossdoor.dir/all
+CMakeFiles/react.dir/all:
+	$(MAKE) -f CMakeFiles/react.dir/build.make CMakeFiles/react.dir/depend
+	$(MAKE) -f CMakeFiles/react.dir/build.make CMakeFiles/react.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/veronika/BT_temoto/reactive_seq/build/CMakeFiles --progress-num=1,2,3 "Built target react"
+.PHONY : CMakeFiles/react.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/crossdoor.dir/rule: cmake_check_build_system
+CMakeFiles/react.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crossdoor.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/react.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/veronika/BT_temoto/reactive_seq/build/CMakeFiles 0
-.PHONY : CMakeFiles/crossdoor.dir/rule
+.PHONY : CMakeFiles/react.dir/rule
 
 # Convenience name for target.
-crossdoor: CMakeFiles/crossdoor.dir/rule
+react: CMakeFiles/react.dir/rule
 
-.PHONY : crossdoor
+.PHONY : react
 
 # clean rule for target.
-CMakeFiles/crossdoor.dir/clean:
-	$(MAKE) -f CMakeFiles/crossdoor.dir/build.make CMakeFiles/crossdoor.dir/clean
-.PHONY : CMakeFiles/crossdoor.dir/clean
+CMakeFiles/react.dir/clean:
+	$(MAKE) -f CMakeFiles/react.dir/build.make CMakeFiles/react.dir/clean
+.PHONY : CMakeFiles/react.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
