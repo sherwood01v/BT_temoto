@@ -50,6 +50,7 @@ BT::NodeStatus isObjectPicked::tick()
 
 BT::NodeStatus PickObject::onRunning()
 {
+    std::cout << "Is _start_picking" << _start_picking << std::endl;
     if(!_start_picking)
     {
         _completion_time = chr::system_clock::now() + chr::milliseconds(200);
