@@ -17,6 +17,23 @@ int main()
   factory.registerNodeType<ReactNodes::PlaceObject>("PlaceObject");
 
   auto tree = factory.createTreeFromFile("./react.xml");
+
+  BT::NodeStatus status = BT::NodeStatus::IDLE;
+
+  std::cout << "--- ticking\n";
+  status = tree.tickOnce();
+  std::cout << "--- status: " << BT::toStr(status) << "\n\n";
+
+  while(status == BT::NodeStatus::RUNNING) 
+  {
+    tree.sleep(std::chrono::milliseconds(100));
+
+    std::cout << "--- ticking\n";
+    status = tree.tickOnce();
+    std::cout << "--- status: " << BT::toStr(status) << "\n\n";
+  }
+
   tree.tickWhileRunning();
+  
   return 0;
 }
