@@ -14,6 +14,7 @@ inline void SleepMS(int ms)
 BT::NodeStatus isObjectFound::tick()
 {
     SleepMS(200);
+    auto msg = getInput<int8_t>("_object_found");
     std::cout << "Is object found" << _object_found << std::endl;
     return _object_found ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 }
@@ -119,7 +120,7 @@ void PlaceObject::onHalted()
 
 }
 
-// _object_found = false +
+// _object_found = false
 // _completion_time
 // _start_finding = false
 // _object_picked = false
