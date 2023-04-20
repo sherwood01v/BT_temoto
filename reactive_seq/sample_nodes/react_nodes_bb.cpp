@@ -10,26 +10,48 @@ inline void SleepMS(int ms)
   std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
+//INITIALIZE PARAMETERS
+// BT::NodeStatus InitialNode::tick()
+// {
+//     bool _object_found = false;
+//     bool _start_finding = false;
+//     bool _object_picked = false;
+//     bool _start_picking = false;
+//     bool _seq_interrupted = false;
+//     bool _object_placed = false;
+//     bool _start_placing = false;
+//     setOutput<bool>("output_found", _object_found);
+//     setOutput<bool>("output_s_find", _start_finding);
+//     setOutput<bool>("output_picked", _object_picked);
+//     setOutput<bool>("output_s_picking", _start_picking);
+//     setOutput<bool>("output_interrupt", _seq_interrupted);
+//     setOutput<bool>("output_placed", _object_placed);
+//     setOutput<bool>("output_s_placing", _start_placing);
+//     return BT::NodeStatus::SUCCESS;
+// }
+
 // FIND OBJECT
 BT::NodeStatus isObjectFound::tick()
 {
     SleepMS(200);
+    auto _object_found = getInput<bool>("input_found");
     std::cout << "Is object found" << _object_found << std::endl;
     return _object_found ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 }
 
 BT::NodeStatus FindObject::onRunning()
 {
+    auto _start_finding = getInput<bool>("input_s_find");
     if(!_start_finding)
     {
         _completion_time = chr::system_clock::now() + chr::milliseconds(200);
-        _start_finding = true;
+        setOutput<bool>("output_s_find", true);
     }
     if(chr::system_clock::now() >= _completion_time)
     {
         std::cout << "[ FindObject: FINISHED ]" << std::endl;
-        _start_finding = false;
-        _object_found = true;
+        setOutput<bool>("output_s_find", false);
+        setOutput<bool>("output_found", true);
         return BT::NodeStatus::SUCCESS;
     }
     return BT::NodeStatus::RUNNING;
@@ -44,6 +66,7 @@ void FindObject::onHalted()
 BT::NodeStatus isObjectPicked::tick()
 {
     SleepMS(200);
+    auto _object_picked = getInput<bool>("input_picked");
     std::cout << "Is object picked" << _object_picked << std::endl;
     return _object_picked ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 }
@@ -54,13 +77,13 @@ BT::NodeStatus PickObject::onRunning()
     if(!_start_picking)
     {
         _completion_time = chr::system_clock::now() + chr::milliseconds(200);
-        _start_picking = true;
+        setOutput<bool>("output_s_pick", true);
     }
     if(chr::system_clock::now() >= _completion_time)
     {
         std::cout << "[ PickObject: FINISHED ]" << std::endl;
-        _start_picking = false;
-        _object_picked = true;
+        setOutput<bool>("output_s_pick", false);
+        setOutput<bool>("output_picked", true);
         return BT::NodeStatus::SUCCESS;
     }
     return BT::NodeStatus::RUNNING;
