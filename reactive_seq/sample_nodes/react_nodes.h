@@ -3,6 +3,7 @@
 
 #include "behaviortree_cpp/behavior_tree.h"
 #include "behaviortree_cpp/bt_factory.h"
+#include "ros/ros.h"
 
 namespace chr = std::chrono;
 
@@ -14,17 +15,38 @@ class isObjectFound : public BT::SyncActionNode
 public:
     isObjectFound(const std::string& name, const BT::NodeConfig& config)
       : BT::SyncActionNode(name, config)
-    {}
+    {
+      pub_ = nh_.advertise("nameo");
+      sub_ = nh_.subscribe("nameoftheserviuce", callback);
+    }
 
-    BT::NodeStatus tick() override;
+    BT::NodeStatus tick() override
+    {
+      if (waiting)
+      {
+        return BT::NodeStatus::RUNNING;
+      }
+      auto msg;
+      pub_.publish(msg);
+      waiting_for_response_ = true;
+    }
 
     static BT::PortsList providedPorts()
     {
       return BT::PortsList{};
     }
 
+    void callback(const BtMsg& msg)
+    {
+      if
+    }
+
 private:
     bool _object_found   = false;
+    ros::NodeHandle nh_;
+    ros::Subscriber sub_;
+    ros::Publisher pub_;
+    bool waiting_for_response_ = false;
 };
 
 class FindObject : public BT::StatefulActionNode

@@ -3,8 +3,10 @@
 #include "react_nodes.h"
 using namespace ReactNodes;
 
-int main()
+int main(int argc, cahr** argv)
 {  
+
+  ros::init(argc, argv, "my_ros_noide");
   BT::BehaviorTreeFactory factory;
 
   factory.registerNodeType<ReactNodes::isObjectFound>("isObjectFound");
